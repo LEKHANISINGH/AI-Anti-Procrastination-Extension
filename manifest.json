@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "AI Anti-Procrastinator",
+  "version": "2.0",
+  "permissions": ["tabs", "storage", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
